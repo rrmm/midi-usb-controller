@@ -1,5 +1,8 @@
 # midi-usb-controller
 
+All project files Copyright 2018 RM 
+CC BY-SA license with the conditions of the ASF license 
+
 Custom PCB and firmware to implement a MIDI controller board 
 - based on Atmel/Microchip ATSAMD21J18A-AU microcontroller
 - hardware/gerber contains files necessary to have PCB's manufactured
@@ -17,7 +20,8 @@ any events found there
 (udd_ep_job_t* udd_ep_get_job(udd_ep_id_t ep))
 - several serial ports and crystals are supported by the board to make it more flexible although they are not necessary for 
 normal USB operation
-- the 100nF capacitors in the low pass filter of each control input were not used/necessary
+- the 100nF capacitors in the low-pass filter of each control input were not used/necessary
+- built prototype uses some 10K resistors and some 22K resistors in the low-pass filters without noticible effects
 - src/main.c contains the initialization and controller sampling.  It also defines which control is treated as a pitchbend wheel
 - src/midi dir contains the actual device implementation and USB config descriptors
 - src/config/  contains some important definitions in the clock and usb files (including the midi device descriptor strings)
